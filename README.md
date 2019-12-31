@@ -1,6 +1,7 @@
 # CC
 
-This app is for randomly selected charactders/stages in Super Smash Bros. Ultimate.
+This app is for randomly selecting characters/stages in Super Smash Bros. Ultimate plus a few
+game modes I created.
 I know the use of this app is redundant, but I wanted to create an app that I can use 
 as a learning tool.
 
