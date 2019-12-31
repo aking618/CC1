@@ -8,13 +8,12 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import com.squareup.picasso.Picasso;
 
 
 public class GameModeSelector extends AppCompatActivity {
-
-    int f1,f2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,7 @@ public class GameModeSelector extends AppCompatActivity {
         ImageButton mainMenu = findViewById(R.id.mainMenuButton2);
         ImageButton backButton = findViewById(R.id.backButton);
 
-        ExpandableListView franchiseExListView = findViewById(R.id.franchiseListView);
+        final Spinner franchiseSpinner = findViewById(R.id.franchiseSpinner);
 
         gameModeGen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,8 +39,9 @@ public class GameModeSelector extends AppCompatActivity {
                     case 2: Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(fighterOneView);
                             Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(fighterTwoView);
                             break;
-                    case 3: Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeHeavyFighterIndex()]).into(fighterOneView);
-                            Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(fighterTwoView);
+                    case 3: if(String.valueOf(franchiseSpinner.getSelectedItem()).equals("Super Mario"))
+                            Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeHeavyFighterIndex()]).into(fighterOneView);
+                            else{Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(fighterTwoView);}
                             break;
                     default://Cool
                 }

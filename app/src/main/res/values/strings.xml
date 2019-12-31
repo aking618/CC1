@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">CC</string>
+    <string name="franchise_prompt">CHOOSE A FRANCHISE</string>
+
+    <string-array name="franchise_arrays">
+        <item>CHOOSE A FRANCHISE</item>
+        <item>Super Mario</item>
+        <item>Legend of Zelda</item>
+        <item>Pokemon</item>
+        <item>Metriod</item>
+        <item>Fire Emblem</item>
+        <item>Kid Icarus</item>
+        <item>Star Fox</item>
+        <item>EarthBound</item>
+    </string-array>
 </resources>

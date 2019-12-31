@@ -39,12 +39,14 @@
         android:layout_marginTop="225dp"
         />
 
-    <ExpandableListView
-        android:id="@+id/franchiseListView"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/franchiseSpinner"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@id/gameModeSelectButton"
+        android:layout_marginBottom="200dp"
+        android:entries="@array/franchise_arrays"
+        android:prompt="@string/franchise_prompt"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         />
