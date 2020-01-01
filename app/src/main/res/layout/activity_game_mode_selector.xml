@@ -39,18 +39,32 @@
         android:layout_marginTop="225dp"
         />
 
-    <Spinner
-        android:id="@+id/franchiseSpinner"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
-        android:entries="@array/franchise_arrays"
-        android:prompt="@string/franchise_prompt"
+        android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
-
+        >
+        <Spinner
+            android:id="@+id/franchiseSpinnerOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/franchise_arrays1"
+            android:prompt="@string/franchise_prompt"
+            android:layout_weight="1"
+            />
+        <Spinner
+            android:id="@+id/franchiseSpinnerTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/franchise_arrays2"
+            android:prompt="@string/franchise_prompt"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
     <ImageButton
         android:id="@+id/gameModeSelectButton"
         android:layout_width="match_parent"

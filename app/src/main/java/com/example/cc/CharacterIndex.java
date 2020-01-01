@@ -14,6 +14,79 @@ public class CharacterIndex {
         return rand.nextInt(heavyFighters.length);
     }
 
+    public static String randomizeFranchiseFighter(String a){
+        Random rand = new Random();
+        String path="";
+        switch(a){
+            case "Animal Crossing": path=Integer.toString(rand.nextInt(animalCrossing.length));
+                break;
+            case "Banjo-Kazooie": path=fighterPath[0];
+                break;
+            case "Bayonetta": path=fighterPath[1];
+                break;
+            case "Castlevania": path=Integer.toString(rand.nextInt(castleVania.length));
+                break;
+            case "Dragon Quest": path=fighterPath[13];
+                break;
+            case "Duck Hunt": path=fighterPath[15];
+                break;
+            case "EarthBound": path=Integer.toString(rand.nextInt(earthBound.length));
+                break;
+            case "Fatal Fury": path=fighterPath[67];
+                break;
+            case "Final Fantasy": path=fighterPath[6];
+                break;
+            case "Fire Emblem": path=Integer.toString(rand.nextInt(fireEmblem.length));
+                break;
+            case "F-Zero": path=fighterPath[4];
+                break;
+            case "Game and Watch": path=fighterPath[42];
+                break;
+            case"Ice Climber":path=fighterPath[21];
+                break;
+            case"Kid Icarus":path=Integer.toString(rand.nextInt(kidIcarus.length));
+                break;
+            case"Legend of Zelda":path=Integer.toString(rand.nextInt(legendOfZelda.length));
+                break;
+            case"Mega Man":path=fighterPath[38];
+                break;
+            case"Metal Gear":path=fighterPath[65];
+                break;
+            case"Metriod":path=Integer.toString(rand.nextInt(metriod.length));
+                break;
+            case"Mii":path=fighterPath[41];
+                break;
+            case"Pac-Man":path=fighterPath[45];
+                break;
+            case"Persona":path=fighterPath[25];
+                break;
+            case"Pikmin":path=fighterPath[44];
+                break;
+            case"Pokemon":path=Integer.toString(rand.nextInt(pokemon.length));
+                break;
+            case"Punch-Out!":path=fighterPath[31];
+                break;
+            case"R.O.B.":path=fighterPath[55];
+                break;
+            case"Sonic the Hedgehog":path=fighterPath[66];
+                break;
+            case"Splatoon":path=fighterPath[23];
+                break;
+            case"Star Fox":path=Integer.toString(rand.nextInt(starFox.length));
+                break;
+            case"Street Fighter":path=Integer.toString(rand.nextInt(streetFighter.length));
+                break;
+            case "Super Mario": path=Integer.toString(rand.nextInt(superMario.length));
+                break;
+            case"Wii Fit":path=fighterPath[71];
+                break;
+            case"Xenoblade Chronicles":path=fighterPath[63];
+                break;
+        }
+
+        return path;
+    }
+
     public static String[] fighterPath = {
             "https://www.smashbros.com/assets_v2/img/fighter/banjo_and_kazooie/main.png",
             "https://www.smashbros.com/assets_v2/img/fighter/bayonetta/main.png",
@@ -55,7 +128,7 @@ public class CharacterIndex {
             "https://www.smashbros.com/assets_v2/img/fighter/marth/main.png",
             "https://www.smashbros.com/assets_v2/img/fighter/mega_man/main.png",
             "https://www.smashbros.com/assets_v2/img/fighter/meta_knight/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/mew_two/main.png",
+            "https://www.smashbros.com/assets_v2/img/fighter/mewtwo/main.png",
             "https://www.smashbros.com/assets_v2/img/fighter/mii_fighter/main.png",
             "https://www.smashbros.com/assets_v2/img/fighter/mr_game_and_watch/main.png",
             "https://www.smashbros.com/assets_v2/img/fighter/ness/main.png",
@@ -94,8 +167,36 @@ public class CharacterIndex {
             "https://www.smashbros.com/assets_v2/img/fighter/zero_suit_samus/main.png"
     };
 
-    //Heavy's {3,12,18,19,27,28,54,65,70}
     public static String[] heavyFighters={fighterPath[3],fighterPath[12],fighterPath[18],
             fighterPath[19],fighterPath[27],fighterPath[28],
             fighterPath[54],fighterPath[65],fighterPath[70]};
+
+    public static String[] animalCrossing={fighterPath[62],fighterPath[69]};
+
+    public static String[] castleVania={fighterPath[53],fighterPath[64]};
+
+    public static String[] earthBound={fighterPath[43],fighterPath[33]};
+
+    public static String[] fireEmblem={fighterPath[5],fighterPath[7],fighterPath[22],fighterPath[34],
+            fighterPath[37],fighterPath[56],fighterPath[56]};
+
+    public static String[] kidIcarus={fighterPath[51],fighterPath[47],fighterPath[9]};
+
+    public static String[] legendOfZelda={fighterPath[18],fighterPath[30],fighterPath[61],
+            fighterPath[68],fighterPath[74], fighterPath[75]};
+
+    public static String[] metriod={fighterPath[20],fighterPath[54],fighterPath[60],fighterPath[76]};
+
+    public static String[] pokemon={fighterPath[19],fighterPath[20],fighterPath[24],fighterPath[32],
+            fighterPath[40],fighterPath[49],fighterPath[50],fighterPath[52]};
+
+    public static String[] starFox={fighterPath[16],fighterPath[17],fighterPath[72]};
+
+    public static String[] streetFighter={fighterPath[59],fighterPath[26]};
+
+    public static String[] superMario={fighterPath[2],fighterPath[3],fighterPath[8],fighterPath[11],fighterPath[12],
+            fighterPath[14],fighterPath[28],fighterPath[35],fighterPath[36],fighterPath[46],
+            fighterPath[48],fighterPath[59],fighterPath[72],fighterPath[75]};
+
 }
+

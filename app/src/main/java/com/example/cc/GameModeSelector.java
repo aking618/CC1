@@ -25,7 +25,13 @@ public class GameModeSelector extends AppCompatActivity {
         ImageButton mainMenu = findViewById(R.id.mainMenuButton2);
         ImageButton backButton = findViewById(R.id.backButton);
 
-        final Spinner franchiseSpinner = findViewById(R.id.franchiseSpinner);
+        final Spinner franchiseSpinnerOne = findViewById(R.id.franchiseSpinnerOne);
+        final Spinner franchiseSpinnerTwo = findViewById(R.id.franchiseSpinnerTwo);
+
+        int state = getIntent().getIntExtra("state",0);
+        if(state==1||state==2){
+            franchiseSpinnerOne.setVisibility(View.INVISIBLE);
+        }
 
         gameModeGen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,9 +44,8 @@ public class GameModeSelector extends AppCompatActivity {
                     case 2: Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(fighterOneView);
                             Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(fighterTwoView);
                             break;
-                    case 3: if(String.valueOf(franchiseSpinner.getSelectedItem()).equals("Super Mario"))
-                            Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeHeavyFighterIndex()]).into(fighterOneView);
-                            else{Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(fighterTwoView);}
+                    case 3: Picasso.get().load(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerOne.getSelectedItem()))).into(fighterOneView);
+                            Picasso.get().load(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerTwo.getSelectedItem()))).into(fighterTwoView);
                             break;
                     default://Cool
                 }

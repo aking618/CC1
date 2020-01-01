@@ -2,15 +2,75 @@
     <string name="app_name">CC</string>
     <string name="franchise_prompt">CHOOSE A FRANCHISE</string>
 
-    <string-array name="franchise_arrays">
-        <item>CHOOSE A FRANCHISE</item>
-        <item>Super Mario</item>
-        <item>Legend of Zelda</item>
-        <item>Pokemon</item>
-        <item>Metriod</item>
-        <item>Fire Emblem</item>
-        <item>Kid Icarus</item>
-        <item>Star Fox</item>
+    <string-array name="franchise_arrays1">
+        <item>PLAYER 1: CHOOSE</item>
+        <item>Animal Crossing</item>
+        <item>Banjo-Kazooie</item>
+        <item>Bayonetta</item>
+        <item>Castlevania</item>
+        <item>Dragon Quest</item>
+        <item>Duck Hunt</item>
         <item>EarthBound</item>
+        <item>Fatal Fury</item>
+        <item>Final Fantasy</item>
+        <item>Fire Emblem</item>
+        <item>F-Zero</item>
+        <item>Game and Watch</item>
+        <item>Ice Climber</item>
+        <item>Kid Icarus</item>
+        <item>Legend of Zelda</item>
+        <item>Mega Man</item>
+        <item>Metal Gear</item>
+        <item>Metriod</item>
+        <item>Mii</item>
+        <item>Pac-Man</item>
+        <item>Persona</item>
+        <item>Pikmin</item>
+        <item>Pokemon</item>
+        <item>Punch-Out!</item>
+        <item>R.O.B.</item>
+        <item>Sonic the Hedgehog</item>
+        <item>Splatoon</item>
+        <item>Star Fox</item>
+        <item>Street Fighter</item>
+        <item>Super Mario</item>
+        <item>Wii Fit</item>
+        <item>Xenoblade Chronicles</item>
+    </string-array>
+
+    <string-array name="franchise_arrays2">
+        <item>PLAYER 2: CHOOSE</item>
+        <item>Animal Crossing</item>
+        <item>Banjo-Kazooie</item>
+        <item>Bayonetta</item>
+        <item>Castlevania</item>
+        <item>Dragon Quest</item>
+        <item>Duck Hunt</item>
+        <item>EarthBound</item>
+        <item>Fatal Fury</item>
+        <item>Final Fantasy</item>
+        <item>Fire Emblem</item>
+        <item>F-Zero</item>
+        <item>Game and Watch</item>
+        <item>Ice Climber</item>
+        <item>Kid Icarus</item>
+        <item>Legend of Zelda</item>
+        <item>Mega Man</item>
+        <item>Metal Gear</item>
+        <item>Metriod</item>
+        <item>Mii</item>
+        <item>Pac-Man</item>
+        <item>Persona</item>
+        <item>Pikmin</item>
+        <item>Pokemon</item>
+        <item>Punch-Out!</item>
+        <item>R.O.B.</item>
+        <item>Sonic the Hedgehog</item>
+        <item>Splatoon</item>
+        <item>Star Fox</item>
+        <item>Street Fighter</item>
+        <item>Super Mario</item>
+        <item>Wii Fit</item>
+        <item>Xenoblade Chronicles</item>
     </string-array>
 </resources>
