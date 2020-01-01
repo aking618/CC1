@@ -18,25 +18,25 @@ public class CharacterIndex {
         Random rand = new Random();
         String path="";
         switch(a){
-            case "Animal Crossing": path=Integer.toString(rand.nextInt(animalCrossing.length));
+            case "Animal Crossing": path=animalCrossing[(rand.nextInt(animalCrossing.length))];
                 break;
             case "Banjo-Kazooie": path=fighterPath[0];
                 break;
             case "Bayonetta": path=fighterPath[1];
                 break;
-            case "Castlevania": path=Integer.toString(rand.nextInt(castleVania.length));
+            case "Castlevania": path=castleVania[(rand.nextInt(castleVania.length))];
                 break;
             case "Dragon Quest": path=fighterPath[13];
                 break;
             case "Duck Hunt": path=fighterPath[15];
                 break;
-            case "EarthBound": path=Integer.toString(rand.nextInt(earthBound.length));
+            case "EarthBound": path=earthBound[(rand.nextInt(earthBound.length))];
                 break;
             case "Fatal Fury": path=fighterPath[67];
                 break;
             case "Final Fantasy": path=fighterPath[6];
                 break;
-            case "Fire Emblem": path=Integer.toString(rand.nextInt(fireEmblem.length));
+            case "Fire Emblem": path=fireEmblem[(rand.nextInt(fireEmblem.length))];
                 break;
             case "F-Zero": path=fighterPath[4];
                 break;
@@ -44,15 +44,15 @@ public class CharacterIndex {
                 break;
             case"Ice Climber":path=fighterPath[21];
                 break;
-            case"Kid Icarus":path=Integer.toString(rand.nextInt(kidIcarus.length));
+            case"Kid Icarus":path=kidIcarus[(rand.nextInt(kidIcarus.length))];
                 break;
-            case"Legend of Zelda":path=Integer.toString(rand.nextInt(legendOfZelda.length));
+            case"Legend of Zelda":path=legendOfZelda[(rand.nextInt(legendOfZelda.length))];
                 break;
             case"Mega Man":path=fighterPath[38];
                 break;
             case"Metal Gear":path=fighterPath[65];
                 break;
-            case"Metriod":path=Integer.toString(rand.nextInt(metriod.length));
+            case"Metriod":path=metriod[(rand.nextInt(metriod.length))];
                 break;
             case"Mii":path=fighterPath[41];
                 break;
@@ -62,7 +62,7 @@ public class CharacterIndex {
                 break;
             case"Pikmin":path=fighterPath[44];
                 break;
-            case"Pokemon":path=Integer.toString(rand.nextInt(pokemon.length));
+            case"Pokemon":path=pokemon[(rand.nextInt(pokemon.length))];
                 break;
             case"Punch-Out!":path=fighterPath[31];
                 break;
@@ -72,16 +72,17 @@ public class CharacterIndex {
                 break;
             case"Splatoon":path=fighterPath[23];
                 break;
-            case"Star Fox":path=Integer.toString(rand.nextInt(starFox.length));
+            case"Star Fox":path=starFox[(rand.nextInt(starFox.length))];
                 break;
-            case"Street Fighter":path=Integer.toString(rand.nextInt(streetFighter.length));
+            case"Street Fighter":path=streetFighter[(rand.nextInt(streetFighter.length))];
                 break;
-            case "Super Mario": path=Integer.toString(rand.nextInt(superMario.length));
+            case "Super Mario": path=superMario[(rand.nextInt(superMario.length))];
                 break;
             case"Wii Fit":path=fighterPath[71];
                 break;
             case"Xenoblade Chronicles":path=fighterPath[63];
                 break;
+            default: path=fighterPath[0];
         }
 
         return path;

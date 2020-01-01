@@ -11,8 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.Arrays;
+import java.util.Random;
+
 
 public class GameModeSelector extends AppCompatActivity {
+
+    public static String[] fPath = CharacterIndex.fighterPath;
+    public static String[] fTemp = new String[fPath.length];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,7 @@ public class GameModeSelector extends AppCompatActivity {
         int state = getIntent().getIntExtra("state",0);
         if(state==1||state==2){
             franchiseSpinnerOne.setVisibility(View.INVISIBLE);
+            franchiseSpinnerTwo.setVisibility(View.INVISIBLE);
         }
 
         gameModeGen.setOnClickListener(new View.OnClickListener() {
@@ -41,8 +48,8 @@ public class GameModeSelector extends AppCompatActivity {
                     case 1: Picasso.get().load(CharacterIndex.heavyFighters[CharacterIndex.randomizeHeavyFighterIndex()]).into(fighterOneView);
                             Picasso.get().load(CharacterIndex.heavyFighters[CharacterIndex.randomizeHeavyFighterIndex()]).into(fighterTwoView);
                             break;
-                    case 2: Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(fighterOneView);
-                            Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(fighterTwoView);
+                    case 2: Picasso.get().load(CharacterIndex.fighterPath[randAndRemove()]).into(fighterOneView);
+                            Picasso.get().load(CharacterIndex.fighterPath[randAndRemove()]).into(fighterTwoView);
                             break;
                     case 3: Picasso.get().load(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerOne.getSelectedItem()))).into(fighterOneView);
                             Picasso.get().load(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerTwo.getSelectedItem()))).into(fighterTwoView);
@@ -67,5 +74,22 @@ public class GameModeSelector extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
+
+    }
+    public static int randAndRemove(){
+        Random rand = new Random();
+        Arrays.fill(fTemp,"used");
+        int path = rand.nextInt(fPath.length);
+
+        if(!fPath[path].equalsIgnoreCase(fTemp[path])) {
+            fPath[path] = "used";
+            return path;
+        } else if (Arrays.equals(fPath,fTemp)){
+            fPath = CharacterIndex.fighterPath;
+            randAndRemove();
+        }else {
+            randAndRemove();
+        }
+        return 0;
     }
 }
