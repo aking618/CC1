@@ -11,11 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsPage"
-                android:screenOrientation="portrait">
+        <activity android:name=".CrewSmash"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".GameModeSelector"
-                android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SettingsPage"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".GameModeSelector"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".GameModeMenu"
             android:screenOrientation="portrait" />

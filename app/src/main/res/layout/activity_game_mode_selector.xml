@@ -10,11 +10,20 @@
         android:id="@+id/firstView"
         android:layout_width="195dp"
         android:layout_height="195dp"
+        android:src="@drawable/question_mark15"
         android:contentDescription="firstCharacter"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="5dp"
         />
+
+    <ImageView
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:src="@drawable/p1_graphic15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="175dp"/>
 
     <ImageView
         android:id="@+id/versusView"
@@ -33,11 +42,21 @@
         android:id="@+id/secondView"
         android:layout_width="195dp"
         android:layout_height="195dp"
+        android:src="@drawable/question_mark15"
         android:contentDescription="secondCharacter"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="225dp"
         />
+
+    <ImageView
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:src="@drawable/p2_graphic15"
+        android:layout_marginTop="395dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"

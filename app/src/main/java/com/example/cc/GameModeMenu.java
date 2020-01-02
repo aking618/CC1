@@ -34,7 +34,7 @@ public class GameModeMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getBaseContext(),GameModeSelector.class);
-                myIntent.putExtra("state",2);;
+                myIntent.putExtra("state",3);;
                 startActivity(myIntent);
             }
         });
@@ -43,7 +43,7 @@ public class GameModeMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getBaseContext(),GameModeSelector.class);
-                myIntent.putExtra("state",3);;
+                myIntent.putExtra("state",2);;
                 startActivity(myIntent);
             }
         });

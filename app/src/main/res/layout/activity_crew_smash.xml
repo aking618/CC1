@@ -4,40 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GenericSelector">
+    tools:context=".CrewSmash">
 
-    <ImageView
-        android:id="@+id/genericView"
-        android:layout_width="wrap_content"
-        android:layout_height="400dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/question_mark15"
-        android:contentDescription="stageSelected"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+
 
     <ImageButton
-        android:id="@+id/genericButton"
+        android:id="@+id/crewSmashButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        />
+        android:src="@drawable/randomize_fighter_button4"/>
 
-    <ImageButton
-        android:id="@+id/switchButton"
+    <LinearLayout
+        android:id="@+id/buttonLayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:src="@drawable/main_menu_button3"
-        android:contentDescription="mainMenu"
+        android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        >
 
+        <ImageButton
+            android:id="@+id/mainMenuButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_menu_button3"
+            android:contentDescription="mainMenu"
+            android:layout_weight="1"
+            />
+
+        <ImageButton
+            android:id="@+id/backButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button3"
+            android:contentDescription="back"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
