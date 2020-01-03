@@ -50,10 +50,10 @@
             />
 
         <ImageButton
-            android:id="@+id/cCButton"
+            android:id="@+id/crewBattleButton"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:src="@drawable/character_challenge_button3"
+            android:src="@drawable/crew_battle3"
             android:contentDescription="CC"
             />
 

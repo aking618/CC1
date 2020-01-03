@@ -15,7 +15,7 @@ public class GameModeMenu extends AppCompatActivity {
         setContentView(R.layout.activity_game_mode_menu);
 
         ImageButton heavyButton = findViewById(R.id.heavyButton);
-        ImageButton charChallengeButton = findViewById(R.id.cCButton);
+        ImageButton crewBattleButton = findViewById(R.id.crewBattleButton);
         ImageButton franchiseButton = findViewById(R.id.franchiseButton);
         ImageButton comingSoonButton = findViewById(R.id.comingSoonButton);
 
@@ -30,11 +30,10 @@ public class GameModeMenu extends AppCompatActivity {
             }
         });
 
-        charChallengeButton.setOnClickListener(new View.OnClickListener() {
+        crewBattleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(getBaseContext(),GameModeSelector.class);
-                myIntent.putExtra("state",3);;
+                Intent myIntent = new Intent(getBaseContext(),CrewSmash.class);
                 startActivity(myIntent);
             }
         });

@@ -17,9 +17,6 @@ import java.util.Random;
 
 public class GameModeSelector extends AppCompatActivity {
 
-    public static int[] fPath = new int[CharacterIndex.fighterPath.length];
-    public static int[] fTemp = new int[fPath.length];
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +31,6 @@ public class GameModeSelector extends AppCompatActivity {
         final Spinner franchiseSpinnerOne = findViewById(R.id.franchiseSpinnerOne);
         final Spinner franchiseSpinnerTwo = findViewById(R.id.franchiseSpinnerTwo);
 
-        Arrays.fill(fPath,0);
-        Arrays.fill(fTemp,1);
 
         int state = getIntent().getIntExtra("state",0);
         if(state==1){
