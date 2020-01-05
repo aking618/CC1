@@ -10,8 +10,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -25,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
         ImageButton settingButton = findViewById(R.id.settingButton);
         final ImageButton aboutButton = findViewById(R.id.aboutButton);
 
-
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         //Switches to Generic Selector Activity
         fighterButton.setOnClickListener(new View.OnClickListener() {

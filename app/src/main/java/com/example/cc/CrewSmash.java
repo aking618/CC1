@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.squareup.picasso.Picasso;
 
 public class CrewSmash extends AppCompatActivity {
@@ -28,7 +30,9 @@ public class CrewSmash extends AppCompatActivity {
         ImageButton mainMenu = findViewById(R.id.mainMenuButton3);
         ImageButton backButton = findViewById(R.id.backButton2);
 
-
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         crewSmashButton.setOnClickListener(new View.OnClickListener() {
             @Override

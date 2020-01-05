@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class GameModeMenu extends AppCompatActivity {
 
     @Override
@@ -20,6 +23,10 @@ public class GameModeMenu extends AppCompatActivity {
         ImageButton comingSoonButton = findViewById(R.id.comingSoonButton);
 
         ImageButton mainMenuButton = findViewById(R.id.mainMenuButton);
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         heavyButton.setOnClickListener(new View.OnClickListener() {
             @Override

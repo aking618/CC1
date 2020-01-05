@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.squareup.picasso.Picasso;
 
 public class GenericSelector extends AppCompatActivity {
@@ -22,6 +24,10 @@ public class GenericSelector extends AppCompatActivity {
         ImageButton mainMenuButton = findViewById(R.id.switchButton);
 
         final ImageButton randButton = findViewById(R.id.genericButton);
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         int state = getIntent().getIntExtra("state",0);
         switch (state){
