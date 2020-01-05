@@ -9,10 +9,6 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.squareup.picasso.Picasso;
-
-import java.util.Arrays;
-import java.util.Random;
 
 
 public class GameModeSelector extends AppCompatActivity {
@@ -43,11 +39,11 @@ public class GameModeSelector extends AppCompatActivity {
             public void onClick(View v) {
                 int state = getIntent().getIntExtra("state",0);
                 switch (state){
-                    case 1: Picasso.get().load(CharacterIndex.heavyFighters[CharacterIndex.randomizeHeavyFighterIndex()]).into(fighterOneView);
-                            Picasso.get().load(CharacterIndex.heavyFighters[CharacterIndex.randomizeHeavyFighterIndex()]).into(fighterTwoView);
-                            break;
-                    case 2: Picasso.get().load(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerOne.getSelectedItem()))).into(fighterOneView);
-                        Picasso.get().load(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerTwo.getSelectedItem()))).into(fighterTwoView);
+                    case 1: fighterOneView.setImageResource(CharacterIndex.heavyFighters[CharacterIndex.randomizeHeavyFighterIndex()]);
+                        fighterTwoView.setImageResource(CharacterIndex.heavyFighters[CharacterIndex.randomizeHeavyFighterIndex()]);
+                        break;
+                    case 2: fighterOneView.setImageResource(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerOne.getSelectedItem())));
+                        fighterTwoView.setImageResource(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerTwo.getSelectedItem())));
                         break;
                     default://Cool
                 }

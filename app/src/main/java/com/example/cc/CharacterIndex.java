@@ -14,190 +14,125 @@ public class CharacterIndex {
         return rand.nextInt(heavyFighters.length);
     }
 
-    public static String randomizeFranchiseFighter(String a){
+    public static int randomizeFranchiseFighter(String a){
         Random rand = new Random();
-        String path="";
+        int index;
         switch(a){
-            case "Animal Crossing": path=animalCrossing[(rand.nextInt(animalCrossing.length))];
+            case "Animal Crossing": index=animalCrossing[(rand.nextInt(animalCrossing.length))];
                 break;
-            case "Banjo-Kazooie": path=fighterPath[0];
+            case "Banjo-Kazooie": index=fighterPath[0];
                 break;
-            case "Bayonetta": path=fighterPath[1];
+            case "Bayonetta": index=fighterPath[1];
                 break;
-            case "Castlevania": path=castleVania[(rand.nextInt(castleVania.length))];
+            case "Castlevania": index=castleVania[(rand.nextInt(castleVania.length))];
                 break;
-            case "Dragon Quest": path=fighterPath[13];
+            case "Dragon Quest": index=fighterPath[13];
                 break;
-            case "Duck Hunt": path=fighterPath[15];
+            case "Duck Hunt": index=fighterPath[15];
                 break;
-            case "EarthBound": path=earthBound[(rand.nextInt(earthBound.length))];
+            case "EarthBound": index=earthBound[(rand.nextInt(earthBound.length))];
                 break;
-            case "Fatal Fury": path=fighterPath[67];
+            case "Fatal Fury": index=fighterPath[67];
                 break;
-            case "Final Fantasy": path=fighterPath[6];
+            case "Final Fantasy": index=fighterPath[7];
                 break;
-            case "Fire Emblem": path=fireEmblem[(rand.nextInt(fireEmblem.length))];
+            case "Fire Emblem": index=fireEmblem[(rand.nextInt(fireEmblem.length))];
                 break;
-            case "F-Zero": path=fighterPath[4];
+            case "F-Zero": index=fighterPath[3];
                 break;
-            case "Game and Watch": path=fighterPath[42];
+            case "Game and Watch": index=fighterPath[42];
                 break;
-            case"Ice Climber":path=fighterPath[21];
+            case"Ice Climber":index=fighterPath[21];
                 break;
-            case"Kid Icarus":path=kidIcarus[(rand.nextInt(kidIcarus.length))];
+            case"Kid Icarus":index=kidIcarus[(rand.nextInt(kidIcarus.length))];
                 break;
-            case"Legend of Zelda":path=legendOfZelda[(rand.nextInt(legendOfZelda.length))];
+            case "Kirby":index=kirby[rand.nextInt(kirby.length)];
                 break;
-            case"Mega Man":path=fighterPath[38];
+            case"Legend of Zelda":index=legendOfZelda[(rand.nextInt(legendOfZelda.length))];
                 break;
-            case"Metal Gear":path=fighterPath[65];
+            case"Mega Man":index=fighterPath[38];
                 break;
-            case"Metriod":path=metriod[(rand.nextInt(metriod.length))];
+            case"Metal Gear":index=fighterPath[65];
                 break;
-            case"Mii":path=fighterPath[41];
+            case"Metriod":index=metriod[(rand.nextInt(metriod.length))];
                 break;
-            case"Pac-Man":path=fighterPath[45];
+            case"Mii":index=fighterPath[41];
                 break;
-            case"Persona":path=fighterPath[25];
+            case"Pac-Man":index=fighterPath[45];
                 break;
-            case"Pikmin":path=fighterPath[44];
+            case"Persona":index=fighterPath[25];
                 break;
-            case"Pokemon":path=pokemon[(rand.nextInt(pokemon.length))];
+            case"Pikmin":index=fighterPath[43];
                 break;
-            case"Punch-Out!":path=fighterPath[31];
+            case"Pokemon":index=pokemon[(rand.nextInt(pokemon.length))];
                 break;
-            case"R.O.B.":path=fighterPath[55];
+            case"Punch-Out!":index=fighterPath[30];
                 break;
-            case"Sonic the Hedgehog":path=fighterPath[66];
+            case"R.O.B.":index=fighterPath[56];
                 break;
-            case"Splatoon":path=fighterPath[23];
+            case"Sonic the Hedgehog":index=fighterPath[66];
                 break;
-            case"Star Fox":path=starFox[(rand.nextInt(starFox.length))];
+            case"Splatoon":index=fighterPath[23];
                 break;
-            case"Street Fighter":path=streetFighter[(rand.nextInt(streetFighter.length))];
+            case"Star Fox":index=starFox[(rand.nextInt(starFox.length))];
                 break;
-            case "Super Mario": path=superMario[(rand.nextInt(superMario.length))];
+            case"Street Fighter":index=streetFighter[(rand.nextInt(streetFighter.length))];
                 break;
-            case"Wii Fit":path=fighterPath[71];
+            case "Super Mario": index=superMario[(rand.nextInt(superMario.length))];
                 break;
-            case"Xenoblade Chronicles":path=fighterPath[63];
+            case"Wii Fit":index=fighterPath[71];
                 break;
-            default: path=fighterPath[0];
+            case"Xenoblade Chronicles":index=fighterPath[63];
+                break;
+            default: index=fighterPath[0];
         }
 
-        return path;
+        return index;
     }
 
-    public static String[] fighterPath = {
-            "https://www.smashbros.com/assets_v2/img/fighter/banjo_and_kazooie/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/bayonetta/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/bowser_jr/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/bowser/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/captain_falcon/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/chrom/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/cloud/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/corrin/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/daisy/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/dark_pit/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/dark_samus/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/diddy_kong/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/donkey_kong/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/dq_hero/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/dr_mario/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/duck_hunt/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/falco/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/fox/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/ganondorf/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/gaogaen/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/greninja/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/ice_climbers/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/ike/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/inkling/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/jigglypuff/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/joker/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/ken/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/king_dedede/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/king_k_rool/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/kirby/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/link/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/little_mac/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/lucario/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/lucas/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/lucina/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/luigi/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/mario/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/marth/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/mega_man/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/meta_knight/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/mewtwo/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/mii_fighter/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/mr_game_and_watch/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/ness/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/olimar/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/pac_man/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/packun_flower/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/palutena/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/peach/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/pichu/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/pikachu/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/pit/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/pokemon_trainer/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/richter/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/ridley/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/rob/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/robin/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/rosalina_and_luma/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/roy/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/ryu/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/samus/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/sheik/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/shizue/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/shulk/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/simon/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/snake/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/sonic/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/terry/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/toon_link/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/villager/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/wario/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/wii_fit_trainer/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/wolf/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/yoshi/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/young_link/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/zelda/main.png",
-            "https://www.smashbros.com/assets_v2/img/fighter/zero_suit_samus/main.png"
+    public static int[] fighterPath = {R.drawable.main,R.drawable.main1,R.drawable.main2,R.drawable.main3,R.drawable.main4,R.drawable.main5,R.drawable.main6,R.drawable.main7,
+            R.drawable.main8,R.drawable.main9,R.drawable.main10,R.drawable.main11,R.drawable.main12,R.drawable.main13,R.drawable.main14,R.drawable.main15,R.drawable.main16,R.drawable.main17,
+            R.drawable.main18,R.drawable.main19,R.drawable.main20,R.drawable.main21,R.drawable.main22,R.drawable.main23,R.drawable.main24,R.drawable.main25,R.drawable.main26,R.drawable.main27,
+            R.drawable.main28,R.drawable.main29,R.drawable.main30,R.drawable.main31,R.drawable.main32,R.drawable.main33,R.drawable.main34,R.drawable.main35,R.drawable.main36,R.drawable.main37,
+            R.drawable.main38,R.drawable.main39,R.drawable.main40,R.drawable.main41,R.drawable.main42,R.drawable.main43,R.drawable.main44,R.drawable.main45,R.drawable.main46,R.drawable.main47,
+            R.drawable.main48,R.drawable.main49,R.drawable.main50,R.drawable.main51,R.drawable.main52,R.drawable.main53,R.drawable.main54,R.drawable.main55, R.drawable.main56,R.drawable.main57,
+            R.drawable.main58,R.drawable.main59,R.drawable.main60,R.drawable.main61,R.drawable.main62,R.drawable.main63,R.drawable.main64,R.drawable.main65, R.drawable.main66,R.drawable.main67,
+            R.drawable.main68,R.drawable.main69,R.drawable.main70,R.drawable.main71,R.drawable.main72,R.drawable.main73,R.drawable.main74,R.drawable.main75, R.drawable.main76
     };
 
-    public static String[] heavyFighters={fighterPath[3],fighterPath[12],fighterPath[18],
-            fighterPath[19],fighterPath[27],fighterPath[28],
+
+    public static int[] heavyFighters={fighterPath[2],fighterPath[12],fighterPath[17],
+            fighterPath[19],fighterPath[22],fighterPath[27],fighterPath[28],
             fighterPath[54],fighterPath[65],fighterPath[70]};
 
-    public static String[] animalCrossing={fighterPath[62],fighterPath[69]};
+    private static int[] animalCrossing={fighterPath[62],fighterPath[69]};
 
-    public static String[] castleVania={fighterPath[53],fighterPath[64]};
+    private static int[] castleVania={fighterPath[53],fighterPath[64]};
 
-    public static String[] earthBound={fighterPath[43],fighterPath[33]};
+    private static int[] earthBound={fighterPath[44],fighterPath[33]};
 
-    public static String[] fireEmblem={fighterPath[5],fighterPath[7],fighterPath[22],fighterPath[34],
-            fighterPath[37],fighterPath[56],fighterPath[56]};
+    private static int[] fireEmblem={fighterPath[4],fighterPath[6],fighterPath[22],fighterPath[35],
+            fighterPath[37],fighterPath[55],fighterPath[59]};
 
-    public static String[] kidIcarus={fighterPath[51],fighterPath[47],fighterPath[9]};
+    private static int[] kidIcarus={fighterPath[51],fighterPath[47],fighterPath[9]};
 
-    public static String[] legendOfZelda={fighterPath[18],fighterPath[30],fighterPath[61],
+    private static int[] kirby={fighterPath[31],fighterPath[27],fighterPath[39]};
+
+    private static int[] legendOfZelda={fighterPath[17],fighterPath[29],fighterPath[61],
             fighterPath[68],fighterPath[74], fighterPath[75]};
 
-    public static String[] metriod={fighterPath[20],fighterPath[54],fighterPath[60],fighterPath[76]};
+    private static int[] metriod={fighterPath[10],fighterPath[54],fighterPath[60],fighterPath[76]};
 
-    public static String[] pokemon={fighterPath[19],fighterPath[20],fighterPath[24],fighterPath[32],
+    private static int[] pokemon={fighterPath[19],fighterPath[20],fighterPath[24],fighterPath[32],
             fighterPath[40],fighterPath[49],fighterPath[50],fighterPath[52]};
 
-    public static String[] starFox={fighterPath[16],fighterPath[17],fighterPath[72]};
+    private static int[] starFox={fighterPath[16],fighterPath[18],fighterPath[72]};
 
-    public static String[] streetFighter={fighterPath[59],fighterPath[26]};
+    private static int[] streetFighter={fighterPath[59],fighterPath[26]};
 
-    public static String[] superMario={fighterPath[2],fighterPath[3],fighterPath[8],fighterPath[11],fighterPath[12],
-            fighterPath[14],fighterPath[28],fighterPath[35],fighterPath[36],fighterPath[46],
-            fighterPath[48],fighterPath[59],fighterPath[72],fighterPath[75]};
+    private static int[] superMario={fighterPath[2],fighterPath[5],fighterPath[8],fighterPath[11],fighterPath[12],
+            fighterPath[14],fighterPath[28],fighterPath[34],fighterPath[36],fighterPath[46],
+            fighterPath[48],fighterPath[57],fighterPath[70],fighterPath[73]};
 
 }
 

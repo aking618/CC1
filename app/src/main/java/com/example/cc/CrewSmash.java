@@ -38,37 +38,37 @@ public class CrewSmash extends AppCompatActivity {
                 int index = CharacterIndex.randomizeFighterIndex();
                 int temp = index;
 
-                Picasso.get().load(CharacterIndex.fighterPath[index]).into(crewOne);
+                crew1.setImageResource(CharacterIndex.fighterPath[index]);
 
                 index = CharacterIndex.randomizeFighterIndex();
                 if(index==temp) { index = CharacterIndex.randomizeFighterIndex(); }
                 temp = index;
 
-                Picasso.get().load(CharacterIndex.fighterPath[index]).into(crewTwo);
+                crew2.setImageResource(CharacterIndex.fighterPath[index]);
 
                 index = CharacterIndex.randomizeFighterIndex();
                 if(index==temp) { index = CharacterIndex.randomizeFighterIndex(); }
                 temp = index;
 
-                Picasso.get().load(CharacterIndex.fighterPath[index]).into(crewThree);
+                crew3.setImageResource(CharacterIndex.fighterPath[index]);
 
 
                 //Randomize Fighters for Player Two with zero repeats
                 index = CharacterIndex.randomizeFighterIndex();
                 temp = index;
 
-                Picasso.get().load(CharacterIndex.fighterPath[index]).into(crew1);
+                crewOne.setImageResource(CharacterIndex.fighterPath[index]);
 
                 index = CharacterIndex.randomizeFighterIndex();
                 if(index==temp) { index = CharacterIndex.randomizeFighterIndex(); }
                 temp = index;
 
-                Picasso.get().load(CharacterIndex.fighterPath[index]).into(crew2);
+                crewTwo.setImageResource(CharacterIndex.fighterPath[index]);
 
                 index = CharacterIndex.randomizeFighterIndex();
                 if(index==temp) { index = CharacterIndex.randomizeFighterIndex(); }
 
-                Picasso.get().load(CharacterIndex.fighterPath[index]).into(crew3);
+                crewThree.setImageResource(CharacterIndex.fighterPath[index]);
             }
         });
 

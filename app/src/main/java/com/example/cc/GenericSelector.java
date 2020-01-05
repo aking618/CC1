@@ -45,7 +45,7 @@ public class GenericSelector extends AppCompatActivity {
             public void onClick(View v) {
                 int state = getIntent().getIntExtra("state",0);
                 switch (state){
-                    case 1: Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).into(resultView);
+                    case 1: resultView.setImageResource(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]);
                         break;
                     case 2: Picasso.get().load(StageIndex.stagePath[StageIndex.randomizeStageIndex()]).into(resultView);
                         break;
