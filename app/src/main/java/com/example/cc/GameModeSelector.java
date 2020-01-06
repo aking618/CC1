@@ -9,6 +9,8 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 
 public class GameModeSelector extends AppCompatActivity {
@@ -26,6 +28,10 @@ public class GameModeSelector extends AppCompatActivity {
 
         final Spinner franchiseSpinnerOne = findViewById(R.id.franchiseSpinnerOne);
         final Spinner franchiseSpinnerTwo = findViewById(R.id.franchiseSpinnerTwo);
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
 
         int state = getIntent().getIntExtra("state",0);
