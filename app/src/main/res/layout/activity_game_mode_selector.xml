@@ -25,18 +25,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="175dp"/>
 
-    <ImageView
-        android:id="@+id/versusView"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:contentDescription="versusSign"
-        android:visibility="invisible"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="205dp"
-        android:src="@drawable/vs_logo3"
-        />
 
     <ImageView
         android:id="@+id/secondView"
@@ -46,14 +34,14 @@
         android:contentDescription="secondCharacter"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="225dp"
+        android:layout_marginTop="200dp"
         />
 
     <ImageView
         android:layout_width="195dp"
         android:layout_height="50dp"
         android:src="@drawable/p2_graphic15"
-        android:layout_marginTop="395dp"
+        android:layout_marginTop="370dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -97,7 +85,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -132,7 +119,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-8597101134819984~2777371613">
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
     </com.google.android.gms.ads.AdView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

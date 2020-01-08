@@ -1,18 +1,19 @@
 package com.example.cc;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.squareup.picasso.Picasso;
 
-import static com.example.cc.CharacterIndex.*;
+import static com.example.cc.CharacterIndex.fighterPath;
+import static com.example.cc.CharacterIndex.randomizeFighterIndex;
 
 public class CrewSmash extends AppCompatActivity {
 
@@ -29,6 +30,8 @@ public class CrewSmash extends AppCompatActivity {
         final ImageView crew3 = findViewById(R.id.crewTwoView3);
 
         ImageButton crewSmashButton = findViewById(R.id.crewSmashButton);
+        Picasso.get().load(R.drawable.randomize_crew_button4).noFade().into(crewSmashButton);
+
         ImageButton mainMenu = findViewById(R.id.mainMenuButton3);
         ImageButton backButton = findViewById(R.id.backButton2);
 
