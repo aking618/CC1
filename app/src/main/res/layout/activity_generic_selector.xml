@@ -22,8 +22,7 @@
         android:id="@+id/genericButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/switchButton"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
@@ -34,7 +33,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/main_menu_button3"
         android:contentDescription="mainMenu"
-        app:layout_constraintTop_toBottomOf="@id/genericButton"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 

@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.squareup.picasso.Picasso;
+
+import static com.example.cc.CharacterIndex.*;
 
 
 public class GameModeSelector extends AppCompatActivity {
@@ -45,12 +48,16 @@ public class GameModeSelector extends AppCompatActivity {
             public void onClick(View v) {
                 int state = getIntent().getIntExtra("state",0);
                 switch (state){
-                    case 1: fighterOneView.setImageResource(CharacterIndex.heavyFighters[CharacterIndex.randomizeHeavyFighterIndex()]);
-                        fighterTwoView.setImageResource(CharacterIndex.heavyFighters[CharacterIndex.randomizeHeavyFighterIndex()]);
-                        break;
-                    case 2: fighterOneView.setImageResource(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerOne.getSelectedItem())));
-                        fighterTwoView.setImageResource(CharacterIndex.randomizeFranchiseFighter(String.valueOf(franchiseSpinnerTwo.getSelectedItem())));
-                        break;
+                    case 1: Picasso.get().load(heavyFighters[randomizeHeavyFighterIndex()]).fit().centerInside()
+                                    .noFade().into(fighterOneView);
+                            Picasso.get().load(heavyFighters[randomizeHeavyFighterIndex()]).fit().centerInside()
+                                    .noFade().into(fighterTwoView);
+                            break;
+                    case 2: Picasso.get().load(randomizeFranchiseFighter(String.valueOf(franchiseSpinnerOne.getSelectedItem()))).fit().centerInside()
+                                    .noFade().into(fighterOneView);
+                        Picasso.get().load(randomizeFranchiseFighter(String.valueOf(franchiseSpinnerTwo.getSelectedItem()))).fit().centerInside()
+                                    .noFade().into(fighterTwoView);
+                                    break;
                     default://Cool
                 }
             }

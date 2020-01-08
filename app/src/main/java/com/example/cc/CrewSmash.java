@@ -12,6 +12,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.squareup.picasso.Picasso;
 
+import static com.example.cc.CharacterIndex.*;
+
 public class CrewSmash extends AppCompatActivity {
 
     @Override
@@ -39,40 +41,46 @@ public class CrewSmash extends AppCompatActivity {
             public void onClick(View v) {
 
                 //Randomize Fighters for Player One with zero repeats
-                int index = CharacterIndex.randomizeFighterIndex();
+                int index = randomizeFighterIndex();
                 int temp = index;
 
-                crew1.setImageResource(CharacterIndex.fighterPath[index]);
+                Picasso.get().load(fighterPath[index]).fit().centerInside()
+                        .noFade().into(crew1);
 
-                index = CharacterIndex.randomizeFighterIndex();
-                if(index==temp) { index = CharacterIndex.randomizeFighterIndex(); }
+                index = randomizeFighterIndex();
+                if(index==temp) { index = randomizeFighterIndex(); }
                 temp = index;
 
-                crew2.setImageResource(CharacterIndex.fighterPath[index]);
+                Picasso.get().load(fighterPath[index]).fit().centerInside()
+                        .noFade().into(crew2);
 
-                index = CharacterIndex.randomizeFighterIndex();
-                if(index==temp) { index = CharacterIndex.randomizeFighterIndex(); }
+                index = randomizeFighterIndex();
+                if(index==temp) { index = randomizeFighterIndex(); }
                 temp = index;
 
-                crew3.setImageResource(CharacterIndex.fighterPath[index]);
+                Picasso.get().load(fighterPath[index]).fit().centerInside()
+                        .noFade().into(crew3);
 
 
                 //Randomize Fighters for Player Two with zero repeats
-                index = CharacterIndex.randomizeFighterIndex();
+                index = randomizeFighterIndex();
                 temp = index;
 
-                crewOne.setImageResource(CharacterIndex.fighterPath[index]);
+                Picasso.get().load(fighterPath[index]).fit().centerInside()
+                        .noFade().into(crewOne);
 
-                index = CharacterIndex.randomizeFighterIndex();
-                if(index==temp) { index = CharacterIndex.randomizeFighterIndex(); }
+                index = randomizeFighterIndex();
+                if(index==temp) { index = randomizeFighterIndex(); }
                 temp = index;
 
-                crewTwo.setImageResource(CharacterIndex.fighterPath[index]);
+                Picasso.get().load(fighterPath[index]).fit().centerInside()
+                        .noFade().into(crewTwo);
 
-                index = CharacterIndex.randomizeFighterIndex();
-                if(index==temp) { index = CharacterIndex.randomizeFighterIndex(); }
+                index = randomizeFighterIndex();
+                if(index==temp) { index = randomizeFighterIndex(); }
 
-                crewThree.setImageResource(CharacterIndex.fighterPath[index]);
+                Picasso.get().load(fighterPath[index]).fit().centerInside()
+                        .noFade().into(crewThree);
             }
         });
 
