@@ -1,12 +1,13 @@
 package com.example.cc;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -14,6 +15,9 @@ import com.squareup.picasso.Picasso;
 
 
 public class GenericSelector extends AppCompatActivity {
+
+    MediaPlayer mediaPlayer = new MediaPlayer();
+    int index;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +61,13 @@ public class GenericSelector extends AppCompatActivity {
             public void onClick(View v) {
                 int state = getIntent().getIntExtra("state",0);
                 switch (state){
-                    case 1: Picasso.get().load(CharacterIndex.fighterPath[CharacterIndex.randomizeFighterIndex()]).fit().centerInside()
+                    case 1:
+                        index = CharacterIndex.randomizeFighterIndex();
+                        Picasso.get().load(CharacterIndex.fighterPath[index]).fit().centerInside()
                                 .noFade().into(resultView);
-                                break;
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), WavIndex.wavFiles[index]);
+                        mediaPlayer.start();
+                        break;
                     case 2: Picasso.get().load(StageIndex.stagePath[StageIndex.randomizeStageIndex()])
                                 .noFade().into(resultView);
                                 break;

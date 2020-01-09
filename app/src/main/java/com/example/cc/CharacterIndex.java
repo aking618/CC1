@@ -14,29 +14,33 @@ public class CharacterIndex {
         return rand.nextInt(heavyFighters.length);
     }
 
-    public static int randomizeFranchiseFighter(String a){
+    public static int randomizeFranchiseFighter(String a) {
         Random rand = new Random();
         int index;
         switch(a){
-            case "Animal Crossing": index=animalCrossing[(rand.nextInt(animalCrossing.length))];
+            case "Animal Crossing":
+                index = rand.nextInt(animalCrossing.length);
                 break;
             case "Banjo-Kazooie": index=fighterPath[0];
                 break;
             case "Bayonetta": index=fighterPath[1];
                 break;
-            case "Castlevania": index=castleVania[(rand.nextInt(castleVania.length))];
+            case "Castlevania":
+                index = rand.nextInt(castleVania.length);
                 break;
             case "Dragon Quest": index=fighterPath[13];
                 break;
             case "Duck Hunt": index=fighterPath[15];
                 break;
-            case "EarthBound": index=earthBound[(rand.nextInt(earthBound.length))];
+            case "EarthBound":
+                index = rand.nextInt(earthBound.length);
                 break;
             case "Fatal Fury": index=fighterPath[67];
                 break;
             case "Final Fantasy": index=fighterPath[7];
                 break;
-            case "Fire Emblem": index=fireEmblem[(rand.nextInt(fireEmblem.length))];
+            case "Fire Emblem":
+                index = rand.nextInt(fireEmblem.length);
                 break;
             case "F-Zero": index=fighterPath[3];
                 break;
@@ -44,17 +48,20 @@ public class CharacterIndex {
                 break;
             case"Ice Climber":index=fighterPath[21];
                 break;
-            case"Kid Icarus":index=kidIcarus[(rand.nextInt(kidIcarus.length))];
+            case "Kid Icarus":
+                index = rand.nextInt(kidIcarus.length);
                 break;
             case "Kirby":index=kirby[rand.nextInt(kirby.length)];
                 break;
-            case"Legend of Zelda":index=legendOfZelda[(rand.nextInt(legendOfZelda.length))];
+            case "Legend of Zelda":
+                index = rand.nextInt(legendOfZelda.length);
                 break;
             case"Mega Man":index=fighterPath[38];
                 break;
             case"Metal Gear":index=fighterPath[65];
                 break;
-            case"Metriod":index=metriod[(rand.nextInt(metriod.length))];
+            case "Metriod":
+                index = rand.nextInt(metriod.length);
                 break;
             case"Mii":index=fighterPath[41];
                 break;
@@ -64,7 +71,8 @@ public class CharacterIndex {
                 break;
             case"Pikmin":index=fighterPath[43];
                 break;
-            case"Pokemon":index=pokemon[(rand.nextInt(pokemon.length))];
+            case "Pokemon":
+                index = rand.nextInt(pokemon.length);
                 break;
             case"Punch-Out!":index=fighterPath[30];
                 break;
@@ -74,17 +82,129 @@ public class CharacterIndex {
                 break;
             case"Splatoon":index=fighterPath[23];
                 break;
-            case"Star Fox":index=starFox[(rand.nextInt(starFox.length))];
+            case "Star Fox":
+                index = rand.nextInt(starFox.length);
                 break;
-            case"Street Fighter":index=streetFighter[(rand.nextInt(streetFighter.length))];
+            case "Street Fighter":
+                index = rand.nextInt(streetFighter.length);
                 break;
-            case "Super Mario": index=superMario[(rand.nextInt(superMario.length))];
+            case "Super Mario":
+                index = rand.nextInt(superMario.length);
                 break;
             case"Wii Fit":index=fighterPath[71];
                 break;
             case"Xenoblade Chronicles":index=fighterPath[63];
                 break;
             default: index=fighterPath[0];
+        }
+
+        return index;
+    }
+
+    public static int showFranchiseFighter(String a, int z) {
+        int index;
+        switch (a) {
+            case "Animal Crossing":
+                index = animalCrossing[z];
+                break;
+            case "Banjo-Kazooie":
+                index = fighterPath[0];
+                break;
+            case "Bayonetta":
+                index = fighterPath[1];
+                break;
+            case "Castlevania":
+                index = castleVania[z];
+                break;
+            case "Dragon Quest":
+                index = fighterPath[13];
+                break;
+            case "Duck Hunt":
+                index = fighterPath[15];
+                break;
+            case "EarthBound":
+                index = earthBound[z];
+                break;
+            case "Fatal Fury":
+                index = fighterPath[67];
+                break;
+            case "Final Fantasy":
+                index = fighterPath[7];
+                break;
+            case "Fire Emblem":
+                index = fireEmblem[z];
+                break;
+            case "F-Zero":
+                index = fighterPath[3];
+                break;
+            case "Game and Watch":
+                index = fighterPath[42];
+                break;
+            case "Ice Climber":
+                index = fighterPath[21];
+                break;
+            case "Kid Icarus":
+                index = kidIcarus[z];
+                break;
+            case "Kirby":
+                index = kirby[z];
+                break;
+            case "Legend of Zelda":
+                index = legendOfZelda[z];
+                break;
+            case "Mega Man":
+                index = fighterPath[38];
+                break;
+            case "Metal Gear":
+                index = fighterPath[65];
+                break;
+            case "Metriod":
+                index = metriod[z];
+                break;
+            case "Mii":
+                index = fighterPath[41];
+                break;
+            case "Pac-Man":
+                index = fighterPath[45];
+                break;
+            case "Persona":
+                index = fighterPath[25];
+                break;
+            case "Pikmin":
+                index = fighterPath[43];
+                break;
+            case "Pokemon":
+                index = pokemon[z];
+                break;
+            case "Punch-Out!":
+                index = fighterPath[30];
+                break;
+            case "R.O.B.":
+                index = fighterPath[56];
+                break;
+            case "Sonic the Hedgehog":
+                index = fighterPath[66];
+                break;
+            case "Splatoon":
+                index = fighterPath[23];
+                break;
+            case "Star Fox":
+                index = starFox[z];
+                break;
+            case "Street Fighter":
+                index = streetFighter[z];
+                break;
+            case "Super Mario":
+                index = superMario[z];
+                break;
+            case "Wii Fit":
+                index = fighterPath[71];
+                break;
+            case "Xenoblade Chronicles":
+                index = fighterPath[63];
+                break;
+            default:
+                index = fighterPath[0];
         }
 
         return index;
