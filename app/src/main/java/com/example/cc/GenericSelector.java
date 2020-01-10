@@ -65,8 +65,10 @@ public class GenericSelector extends AppCompatActivity {
                         index = CharacterIndex.randomizeFighterIndex();
                         Picasso.get().load(CharacterIndex.fighterPath[index]).fit().centerInside()
                                 .noFade().into(resultView);
+
                         mediaPlayer = MediaPlayer.create(getApplicationContext(), WavIndex.wavFiles[index]);
                         mediaPlayer.start();
+                        mediaPlayer.release();
                         break;
                     case 2: Picasso.get().load(StageIndex.stagePath[StageIndex.randomizeStageIndex()])
                                 .noFade().into(resultView);

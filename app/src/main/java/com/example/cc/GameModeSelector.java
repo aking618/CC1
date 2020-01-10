@@ -68,9 +68,16 @@ public class GameModeSelector extends AppCompatActivity {
                         Picasso.get().load(heavyFighters[index]).fit().centerInside()
                                     .noFade().into(fighterTwoView);
 
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), WavIndex.heavyFightersSound[index]);
-                        mediaPlayer.start();
-                            break;
+                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mp) {
+                                mediaPlayer.stop();
+                                mediaPlayer = MediaPlayer.create(getApplicationContext(), WavIndex.heavyFightersSound[index]);
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.release();
+                        break;
 
 
                     case 2:
@@ -87,8 +94,15 @@ public class GameModeSelector extends AppCompatActivity {
                         Picasso.get().load(showFranchiseFighter(selectedFranchise, index)).fit().centerInside()
                                     .noFade().into(fighterTwoView);
 
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), WavIndex.franchiseFighterSounds(selectedFranchise, index));
-                        mediaPlayer.start();
+                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mp) {
+                                mediaPlayer.stop();
+                                mediaPlayer = MediaPlayer.create(getApplicationContext(), WavIndex.franchiseFighterSounds(selectedFranchise, index));
+                                mediaPlayer.start();
+                            }
+                        });
+                        mediaPlayer.release();
                         break;
                     default://Cool
                 }
